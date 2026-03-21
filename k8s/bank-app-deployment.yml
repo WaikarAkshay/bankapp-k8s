@@ -16,7 +16,7 @@ spec:
         app: bankapp
     spec:
       containers:
-      - name: nginx
+      - name: mysql
         image: mysql:8.0
         ports:
         - containerPort: 3306
@@ -24,11 +24,11 @@ spec:
         - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: bank-app-configmap
+              name: bankapp-cm
               key: MYSQL_DATABASE
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: bank-app-secrets
+              name: bankapp-secret
               key: MYSQL_ROOT_PASSWORD
               
