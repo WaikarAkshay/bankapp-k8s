@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: bankapp-ns
   name: bankapp-deployment
-  labels:
-    app: bankapp
+  namespace: bankapp-ns
 spec:
   replicas: 1
   selector:
@@ -31,4 +29,3 @@ spec:
             secretKeyRef:
               name: bankapp-secret
               key: MYSQL_ROOT_PASSWORD
-              
