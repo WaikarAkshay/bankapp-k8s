@@ -26,9 +26,9 @@ spec:
             configMapKeyRef:
               name: bankapp-cm
               key: MySQL_DATABASE
-        - name: MySQL_ROOT_PASSWORD
+        - name: MySQL_PASSWORD
           valueFrom:
             secretKeyRef:
               name: bankapp-secret
-              key: MySQL_ROOT_PASSWORD
+              key: MySQL_PASSWORD
               
