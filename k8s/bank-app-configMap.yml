@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: bankapp-ns
+  name: bankapp-cm
+data:
+  MySQL_DATABASE = bankappdb
+  
