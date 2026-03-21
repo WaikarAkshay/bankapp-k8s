@@ -24,7 +24,7 @@ spec:
         - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: bank-app-configMap
+              name: bank-app-configmap
               key: MYSQL_DATABASE
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
