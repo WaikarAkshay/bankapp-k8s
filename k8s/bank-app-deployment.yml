@@ -21,14 +21,14 @@ spec:
         ports:
         - containerPort: 3306
         env:
-        - name: MySQL_DATABASE
+        - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
               name: bankapp-cm
-              key: MySQL_DATABASE
-        - name: MySQL_PASSWORD
+              key: MYSQL_DATABASE
+        - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
               name: bankapp-secret
-              key: MySQL_PASSWORD
+              key: MYSQL_ROOT_PASSWORD
               
