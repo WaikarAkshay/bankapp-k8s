@@ -34,6 +34,11 @@ spec:
         volumeMounts:
           - name: mysql-vol
             mountPath: /var/lib/mysql
+        readinessProbe:
+          exec: 
+            command: ["mysqladmin","ping","-h","localhost"]
+          initialDelaySeconds: 15
+          periodSeconds: 10
       volumes:
         - name: mysql-vol
           persistentVolumeClaim:
