@@ -8,7 +8,7 @@ spec:
   storageClassName: manual
   capacity:
     storage: 5Gi
-  accessmode:
+  accessModes:
     - ReadWriteOnce
   hostPath: 
     path: /mnt/data/mysql
@@ -25,7 +25,7 @@ spec:
   storageClassName: manual
   capacity:
     storage: 5Gi
-  accessmode:
+  accessModes:
     - ReadWriteOnce
   hostPath:
     path: /mnt/data/ollama
