@@ -5,3 +5,7 @@ metadata:
   namespace: bankapp-ns
 data:
   MYSQL_DATABASE: bankappdb
+  MYSQL_USER: root
+  MYSQL_HOST: mysql-svc
+  MYSQL_PORT: "3306"
+  OLLAMA_URL: http://localhost:11434
