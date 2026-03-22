@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankapp-deployment
+  name: mysql-deployment
   namespace: bankapp-ns
+  labels:
+    app: mysql
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bankapp
+      app: mysql
   template:
     metadata:
       labels:
-        app: bankapp
+        app: mysql
     spec:
       containers:
       - name: mysql
