@@ -31,3 +31,10 @@ spec:
             secretKeyRef:
               name: bankapp-secret
               key: MYSQL_ROOT_PASSWORD
+        volume:
+          name: mysql-vol
+          mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-vol
+          persistentVolumeClaim:
+            ClaimName: mysql-pvc
