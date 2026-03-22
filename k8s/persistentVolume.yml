@@ -12,7 +12,7 @@ spec:
     - ReadWriteOnce
   hostPath: /mnt/data/mysql
 
- ---
+---
 
 apiVersion: v1
 kind: PersistentVolume
