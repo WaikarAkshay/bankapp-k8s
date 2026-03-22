@@ -5,7 +5,7 @@ metadata:
   namespace: bankapp-ns
 spec:
   accessModes:
-    -ReadWriteOnce
+    - ReadWriteOnce
   storageClass: manual
   resource:
     requests:
