@@ -21,7 +21,7 @@ spec:
         ports:
         - containerPort: 8080
         envFrom:
-          - configMapKeyRef:
+          - configMapRef:
               name: bankapp-cm
           - secretRef:
               name: bankapp-secret
