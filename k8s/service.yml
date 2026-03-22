@@ -1,6 +1,6 @@
 kind: Service
 apiVersion: v1
-type: ClusterIP
+
 metadata:
   name: mysql-svc
   namespace: bankapp-ns
@@ -9,3 +9,4 @@ spec:
     app: mysql
   ports:
     - port: 3306
+  type: ClusterIP
