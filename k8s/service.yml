@@ -10,3 +10,18 @@ spec:
   ports:
     - port: 3306
   type: ClusterIP
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: bankapp-svc
+  namespace: bankapp-ns
+spec:
+  selector:
+    app: bankapp
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: NodePort
